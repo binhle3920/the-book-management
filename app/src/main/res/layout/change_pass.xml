@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg">
+
+        <ImageView
+            android:layout_width="107dp"
+            android:layout_height="107dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="TBM"
+            android:textColor="#1E677D"
+            android:textSize="36sp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Old Password:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:includeFontPadding="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="New Password:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="New Password Confirm:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="CHANGE" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Password confirm error"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textSize="13sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

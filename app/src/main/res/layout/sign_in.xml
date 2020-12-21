@@ -9,14 +9,57 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/bg">
 
-        <ImageView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/book" />
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="107dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/logo"
+                android:layout_marginRight="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="TBM"
+                    android:textColor="#1E677D"
+                    android:textSize="36sp"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="The Book"
+                    android:textColor="#0068B4"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Management"
+                    android:textColor="#0068B4"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +104,7 @@
             android:fontFamily="@font/roboto_medium"
             android:text="Forgot password?"
             android:textColor="#1D70EC"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="italic" />
 
         <Button
@@ -69,8 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:text="Sign In" />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Log In" />
 
         <TextView
             android:layout_width="match_parent"
@@ -85,11 +129,10 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="0dp">
 
             <TextView
                 android:layout_width="wrap_content"
