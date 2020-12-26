@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TBM">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".ReadingActivity"></activity>
+        <activity android:name=".BookPreviewActivity" />
+        <activity android:name=".FeedbackScreenActivity" />
+        <activity android:name=".homepage" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
