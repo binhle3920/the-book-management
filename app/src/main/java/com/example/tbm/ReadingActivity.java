@@ -11,4 +11,6 @@ public class ReadingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reading);
     }
+
+
 }

@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (pass.equals(userPass)) {
                             Toast.makeText(getApplicationContext(), "Welcome " + username.getText().toString(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(v.getContext(), homepage.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "Your username or password is not correct", Toast.LENGTH_SHORT).show();
                         }
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             username.setError("Your username is too short");
             return false;
         }
-        if (username.getText().toString().length() >= 10) {
+        if (username.getText().toString().length() >= 15) {
             username.setError("Your username is too long");
             return false;
         }
