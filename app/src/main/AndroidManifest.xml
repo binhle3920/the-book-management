@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TBM">
-        <activity android:name=".ReadingActivity"></activity>
+        <activity
+            android:name=".ShoppingCart"
+            android:label="@string/title_activity_shopping_cart"
+            android:theme="@style/Theme.TBM.NoActionBar"></activity>
+        <activity android:name=".Checkout_activity" />
+        <activity android:name=".ReadingActivity" />
         <activity android:name=".BookPreviewActivity" />
         <activity android:name=".FeedbackScreenActivity" />
         <activity android:name=".homepage" />
