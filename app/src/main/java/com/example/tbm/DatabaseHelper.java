@@ -10,7 +10,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int version = 1;
 
     public DatabaseHelper(Context context) {
-        super(context, "Login.db", null, version);
+        super(context, "TBM.db", null, version);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
