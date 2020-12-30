@@ -50,8 +50,6 @@
             android:layout_height="wrap_content"
             android:background='#eeebeb'
             android:orientation="vertical">
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
@@ -145,14 +143,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/checkBox0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     />
 
                 <ImageView
-                    android:id="@+id/imageView12"
+                    android:id="@+id/imageView13"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/book12" />
@@ -186,7 +184,7 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_marginTop="30dp">
-                        <TextViewy
+                        <TextView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
@@ -216,12 +214,7 @@
 
                     </LinearLayout>
 
-
                 </LinearLayout>
-
-            </LinearLayout>
-
-
 
             </LinearLayout>
 
