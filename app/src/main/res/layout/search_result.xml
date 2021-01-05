@@ -7,8 +7,10 @@
     tools:context=".SearchResultActivity">
 
     <FrameLayout
+        android:id="@+id/content"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_marginBottom="60dp"
         android:orientation="horizontal">
         <FrameLayout
             android:layout_height="75dp"
@@ -79,8 +81,7 @@
                 android:layout_width="148dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginLeft="79dp"
-                android:src="@drawable/five_stars"/>
+                android:layout_marginLeft="79dp"/>
 
         </FrameLayout>
 
@@ -114,8 +115,7 @@
                 android:layout_width="148dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginLeft="79dp"
-                android:src="@drawable/five_stars"/>
+                android:layout_marginLeft="79dp"/>
 
         </FrameLayout>
 
@@ -149,8 +149,7 @@
                 android:layout_width="148dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginLeft="79dp"
-                android:src="@drawable/four_out_of_five_stars"/>
+                android:layout_marginLeft="79dp"/>
 
         </FrameLayout>
 
@@ -184,8 +183,7 @@
                 android:layout_width="148dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginLeft="79dp"
-                android:src="@drawable/four_out_of_five_stars"/>
+                android:layout_marginLeft="79dp"/>
 
         </FrameLayout>
 
@@ -219,45 +217,49 @@
                 android:layout_width="148dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="53dp"
-                android:layout_marginLeft="79dp"
-                android:src="@drawable/three_point_five"/>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="680dp"
-            android:layout_height="70dp"
-            android:background="#EEEBEB">
-            <ImageButton
-                android:background="@null"
-                android:layout_width="50dp"
-                android:layout_height="44dp"
-                android:src="@drawable/home_icon"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitCenter"
-                />
-            <ImageButton
-                android:background="@null"
-                android:layout_width="55dp"
-                android:layout_height="49dp"
-                android:src="@drawable/library_icon"
-                android:layout_marginLeft="170dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitCenter"
-                />
-            <ImageButton
-                android:background="@null"
-                android:layout_width="55dp"
-                android:layout_height="49dp"
-                android:src="@drawable/profile_icon"
-                android:layout_marginLeft="320dp"
-                android:layout_marginTop="10dp"
-                android:scaleType="fitCenter"
-                />
+                android:layout_marginLeft="79dp"/>
         </FrameLayout>
 
     </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#eeebeb"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content">
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="HOME"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/libraryBtn"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:contentDescription="LIBRARY"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/library_icon" />
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="PROFILE"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/profile_icon" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

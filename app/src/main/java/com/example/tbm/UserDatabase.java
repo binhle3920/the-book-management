@@ -6,10 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class UserDatabase extends SQLiteOpenHelper {
     private static final int version = 1;
 
-    public DatabaseHelper(Context context) {
+    public UserDatabase(Context context) {
         super(context, "TBM.db", null, version);
     }
     @Override
@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists user");
     }
 
-    //inserting to database
+    //inserting to user database
     public boolean insert(String username, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();

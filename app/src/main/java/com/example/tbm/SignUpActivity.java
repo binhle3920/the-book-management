@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText username, email, password;
-    DatabaseHelper db;
+    Database db;
     HashHelper md5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
         siBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                Intent intent = new Intent(v.getContext(), LogInActivity.class);
                 startActivity(intent);
             }
         });
@@ -39,10 +39,10 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validateInput()) {
-                    boolean check = db.insert(username.getText().toString(), email.getText().toString(), md5.getMd5(password.getText().toString()));
+                    boolean check = db.insertNewUser(username.getText().toString(), email.getText().toString(), md5.getMd5(password.getText().toString()));
                     if (check == true) {
                         Toast.makeText(getApplicationContext(), "You have signed up success", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(v.getContext(), MainActivity.class);
+                        Intent intent = new Intent(v.getContext(), LogInActivity.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "Something error happen, please try again", Toast.LENGTH_SHORT).show();
@@ -53,7 +53,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void initialize() {
-        db = new DatabaseHelper(this);
+        db = Database.getInstance(this);
         md5 = new HashHelper();
 
         username = (EditText) findViewById(R.id.inputUsername);
@@ -90,6 +90,13 @@ public class SignUpActivity extends AppCompatActivity {
         }
         if (password.getText().toString().length() > 30) {
             password.setError("Your password is too long");
+            return false;
+        }
+
+        //valid account
+        String account_name = username.getText().toString();
+        if(account_name.equals("guest") || account_name.equals("admin")){
+            username.setError("You don't have permission to sign up with this account");
             return false;
         }
 

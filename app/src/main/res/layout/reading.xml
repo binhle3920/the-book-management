@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/backBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -27,11 +27,10 @@
             app:srcCompat="@drawable/back_icon" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/BookCover"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/book13" />
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="150dp"
@@ -44,7 +43,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="BORUTO"
                 android:textStyle="bold"
                 android:textSize="25sp"
                 android:gravity="center_horizontal" />
@@ -54,7 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Author: Masashi Kishimoto"
                 android:textSize="14sp" />
 
             <TextView
@@ -62,12 +59,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Chapter1: New Generation"
+                android:text="Chapter1"
                 android:textSize="14sp" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/chapterBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -88,25 +85,22 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/page01"
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/page03" />
+                android:scaleType="fitCenter"/>
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/page02"
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/page01" />
+                android:scaleType="fitCenter"/>
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/page03"
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/page02" />
+                android:scaleType="fitCenter"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

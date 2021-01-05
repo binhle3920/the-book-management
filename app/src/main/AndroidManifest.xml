@@ -3,29 +3,30 @@
     package="com.example.tbm">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TBM">
-        <activity android:name=".SearchResultActivity"></activity>
+        <activity android:name=".SearchResultActivity"/>
         <activity android:name=".LibraryActivity" />
         <activity android:name=".ProfileActivity" />
         <activity
-            android:name=".ShoppingCart"
+            android:name=".ShoppingCartActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/Theme.TBM.NoActionBar" />
-        <activity android:name=".Checkout_activity" />
+        <activity android:name=".CheckOutActivity" />
         <activity android:name=".ReadingActivity" />
         <activity android:name=".BookPreviewActivity" />
-        <activity android:name=".FeedbackScreenActivity" />
-        <activity android:name=".homepage" />
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".LogInActivity"/>
+        <activity android:name=".ChangePasswordActivity"/>
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".HomepageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

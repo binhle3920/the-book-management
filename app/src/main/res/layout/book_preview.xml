@@ -8,15 +8,14 @@
 
     <ImageView
         android:id="@+id/BookCover"
-        android:layout_width="wrap_content"
-        android:layout_height="333dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bookcover01" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
-        android:id="@+id/imageView3"
+        android:id="@+id/backBtn"
         android:background="@null"
         android:layout_marginTop="20dp"
         android:layout_width="50dp"
@@ -27,30 +26,14 @@
         app:srcCompat="@drawable/back_icon" />
 
     <ImageButton
-        android:id="@+id/imageView4"
-        android:background="@null"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:scaleType="fitCenter"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit_icon" />
-
-    <ImageButton
-        android:id="@+id/imageView5"
+        android:id="@+id/AddtoCartBtn"
         android:background="@null"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
         android:scaleType="fitCenter"
-        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_to_cart_icon" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:id="@+id/Information"
@@ -68,29 +51,33 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/BookTitle"
-                android:layout_width="wrap_content"
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="One Piece"
                 android:textSize="30dp"
                 android:textStyle="bold" />
-
-            <ImageButton
-                android:id="@+id/RateBtn"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:background="@null"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/rate_icon" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="130dp"
+            android:orientation="horizontal">
+            <RatingBar
+                android:id="@+id/MyRating"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="0.1" />
 
             <TextView
                 android:id="@+id/RatingNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="25sp"
-                android:text="4.9" />
+                android:textSize="25sp"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -106,14 +93,12 @@
                 <TextView
                     android:id="@+id/AuthorName"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Author: Eiichiro Oda" />
+                    android:layout_height="wrap_content"/>
 
                 <TextView
                     android:id="@+id/Cost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="500.000 VND"
                     android:textColor="#ff0000" />
             </LinearLayout>
 
@@ -126,7 +111,7 @@
                 android:text="Read" />
 
             <LinearLayout
-                android:layout_width="100dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -149,23 +134,12 @@
 
         </LinearLayout>
 
-        <ScrollView
+        <TextView
+            android:id="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:background="#eeebeb"
-                    android:text="Monkey D. Luffy, a boy whose body gained the properties of rubber after unintentionally eating a Devil Fruit. With his crew of pirates, named the Straw Hat Pirates, Luffy explores the Grand Line in search of the world's ultimate treasure known as 'One Piece' in order to become the next King of the Pirates.\n One Piece has received praise for its storytelling, art, characterization, and humor. Several volumes of the manga have broken publishing records, including the highest initial print run of any book in Japan. The official website for Eiichiro Oda's One Piece manga announced that the manga has set the Guinness World Record for 'the most copies published for the same comic book series by a single author'. As of April 2020, the manga had over 470 million copies in circulation in 43 countries worldwide, making it the best-selling manga series in history. It became the best-selling manga for the eleventh consecutive year in 2018. One Piece has become one of the highest-grossing media franchises of all time." />
-            </LinearLayout>
-        </ScrollView>
+            android:layout_height="100dp"
+            android:scrollbars="vertical"
+            android:background="#eeebeb"/>
 
         <TextView
             android:id="@+id/CommentLabel"

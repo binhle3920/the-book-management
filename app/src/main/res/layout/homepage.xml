@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage">
+    tools:context=".HomepageActivity">
 
     <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
@@ -33,224 +36,287 @@
             app:layout_constraintVertical_bias="0.102"
             app:srcCompat="@drawable/slide1" />
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/SearchBtn"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:background="@color/white"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/SearchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Search for a book..." />
+
+            <ImageButton
+                android:id="@+id/CartBtn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_margin="20dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/SearchBtn"
-                        android:layout_width="40dp"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/search_icon" />
-
-                    <EditText
-                        android:id="@+id/SearchBar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Search for a book..." />
-
-                    <ImageButton
-                        android:id="@+id/CartBtn"
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/white"
-                        android:scaleType="fitCenter"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/cart_icon" />
+                        app:layout_constraintTop_toTopOf="parent">
 
+                        <EditText
+                            android:id="@+id/RecentLabel"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="High rated" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="20dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook01"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book01" />
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook02"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book02" />
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook03"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book03" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook04"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book04" />
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook05"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book05" />
+
+                                <ImageButton
+                                    android:id="@+id/GoodBook06"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book06" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/RcmLabel"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Recommend" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="20dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook01"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book07" />
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook02"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book08" />
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook03"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book09" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook04"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book10" />
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook05"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book13" />
+
+                                <ImageButton
+                                    android:id="@+id/RcmBook06"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/book12" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
+            </ScrollView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <EditText
-                        android:id="@+id/RecentLabel"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="High rated" />
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageButton
-                                android:id="@+id/imageButton7"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book01" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton8"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="25dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book02" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton9"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book03" />
-                        </TableRow>
-                    </TableLayout>
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageButton
-                                android:id="@+id/imageButton10"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book04" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton11"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="25dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book11" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton12"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book12" />
-                        </TableRow>
-                    </TableLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <EditText
-                        android:id="@+id/RcmLabel"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Recommend" />
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageButton
-                                android:id="@+id/imageButton1"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book05" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton2"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="25dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book06" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton3"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book07" />
-                        </TableRow>
-                    </TableLayout>
-
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageButton
-                                android:id="@+id/imageButton4"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book08" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton5"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="25dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book09" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton6"
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@drawable/book10" />
-                        </TableRow>
-                    </TableLayout>
-
-                </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#eeebeb"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content">
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="HOME"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/libraryBtn"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:contentDescription="LIBRARY"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/library_icon" />
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="PROFILE"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/profile_icon" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

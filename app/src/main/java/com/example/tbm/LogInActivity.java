@@ -2,8 +2,6 @@ package com.example.tbm;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,9 +9,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
     private EditText username, password;
-    DatabaseHelper db;
+    Database db;
     HashHelper md5;
 
     @Override
@@ -36,18 +34,23 @@ public class MainActivity extends AppCompatActivity {
         siBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (validateInput()) {
+
                     if (!(db.checkUser(username.getText().toString()))) {
                         String pass = db.getPassword(username.getText().toString());
                         String userPass = md5.getMd5(password.getText().toString());
+//                        Toast.makeText(getApplicationContext(), "password" + pass + ";" + userPass, Toast.LENGTH_LONG).show();
 
                         if (pass.equals(userPass)) {
                             Toast.makeText(getApplicationContext(), "Welcome " + username.getText().toString(), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(v.getContext(), homepage.class);
+                            Intent intent = new Intent(LogInActivity.this, HomepageActivity.class);
+                            intent.putExtra("currentUser", username.getText().toString());
                             startActivity(intent);
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Your username or password is not correct", Toast.LENGTH_SHORT).show();
                         }
+                        else
+                            Toast.makeText(getApplicationContext(), "Your password is incorrect", Toast.LENGTH_SHORT).show();
                     }
+                    else
+                        Toast.makeText(getApplicationContext(), "Your username is exist", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initialize() {
-        db = new DatabaseHelper(this);
+        db = Database.getInstance(this);
         md5 = new HashHelper();
 
         username = (EditText) findViewById(R.id.inputUsernameSI);
@@ -88,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
         }
         if (password.getText().toString().length() > 30) {
             password.setError("Your password is too long");
+            return false;
+        }
+
+        String account_name = username.getText().toString();
+        // default account
+        if(account_name.equals("guest")){
+            username.setError("You don't have permission to login with this account");
             return false;
         }
         return true;
