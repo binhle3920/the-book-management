@@ -36,14 +36,19 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/booklist"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background='#eeebeb'
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/booklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background='#eeebeb'
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <LinearLayout

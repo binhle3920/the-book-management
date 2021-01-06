@@ -168,7 +168,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(1);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -180,7 +179,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(2);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -192,7 +190,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(3);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -204,7 +201,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(4);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -216,7 +212,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(5);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -228,7 +223,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(6);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -241,7 +235,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(7);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -253,7 +246,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(8);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -265,7 +257,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(9);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -277,7 +268,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(10);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -289,7 +279,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(11);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);
@@ -301,7 +290,6 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 curBook = String.valueOf(12);
-                Toast.makeText(HomepageActivity.this, curUser + " " + curBook, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(HomepageActivity.this, BookPreviewActivity.class);
                 intent.putExtra("currentUser", curUser);
                 intent.putExtra("currentBook", curBook);

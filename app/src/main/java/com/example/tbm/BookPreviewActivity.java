@@ -111,8 +111,6 @@ public class BookPreviewActivity extends AppCompatActivity {
     private void displayBook(){
         String[] info = db.getBookInfo(curBook);
 
-        Toast.makeText(this,  info[0], Toast.LENGTH_LONG).show();
-
         bookTitle.setText(info[1]);
 
         author.setText(info[2]);

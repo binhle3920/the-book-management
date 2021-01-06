@@ -82,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         // See Messages
-        message = (ImageButton) findViewById(R.id.ChangePassBtn);
+        message = (ImageButton) findViewById(R.id.MsgBtn);
         message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +101,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         // log out
         logout = (ImageButton) findViewById(R.id.logoutBtn);
-        feedback.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 curUser = "guest";

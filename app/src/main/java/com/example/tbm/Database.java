@@ -177,6 +177,14 @@ public class Database extends SQLiteOpenHelper {
         return (ins != -1);
     }
 
+    // remove user
+    public boolean deleteUser(String name) {
+        SQLiteDatabase db = getWritableDatabase();
+        long ins =  db.delete("USER", "Username =?", new String[]{name});
+        db.close();
+        return (ins > 0);
+    }
+
     // insert new book
     public boolean insertNewBook(String title, String author, String price, String rating, String description, String num_page, String path){
         SQLiteDatabase db = getWritableDatabase();
@@ -234,7 +242,7 @@ public class Database extends SQLiteOpenHelper {
 
         SQLiteDatabase db = getWritableDatabase();
         Cursor cur = db.rawQuery("SELECT * FROM CART WHERE Username =?", new String[]{username});
-        if (cur.moveToFirst()) {
+        while (cur.moveToNext()) {
             String[] temp = new String[2];
             temp[0] = cur.getString(1);  // book id
             temp[1] = cur.getString(2); // quantity

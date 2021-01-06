@@ -50,7 +50,7 @@ public class LogInActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Your password is incorrect", Toast.LENGTH_SHORT).show();
                     }
                     else
-                        Toast.makeText(getApplicationContext(), "Your username is exist", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Your username isn't exist", Toast.LENGTH_SHORT).show();
                 }
             }
         });
